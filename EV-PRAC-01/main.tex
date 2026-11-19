@@ -1,0 +1,174 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{array,longtable,booktabs}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+\bigskip
+
+Fecha: 18 de Noviembre del 2026
+
+Nombre: Sánchez Centeno Roselyn Andreina.
+
+Curso: 4to Software ``B''
+
+Evaluación Práctica I - Ingeniería de Requerimientos.
+
+\section*{T1. Conceptos aplicados al caso}
+
+(a) Explique con sus palabras qué es un requisito
+
+Un requisito es un escrito formal de las necesidades del cliente.
+
+En el E7 se expresa una acción que se está tomando ahora y si se puede ver como un requisito ya que es algo que se puede mejorar e implementar en el sistema.
+
+No considero que E12 sea un requisito del producto ya que se realizará una reunión para obtener los requisitos del sistema.
+
+(b) Explique qué describe la especificación de requisitos.
+
+StRS: la especificación de requisitos de los interesados describe lo que ellos desean del sistema, lo que les beneficiaría, como ejemplo podemos ver el E1 ya que necesitan enterarse a tiempo de cuando el río crezca.
+
+SyRS: la especificación de requisitos del sistema describe lo que se espera del sistema completo por ejemplo la calidad, seguridad, fiabilidad, entre otros. Para ver un ejemplo tenemos el E4 ya que este dice que ``el sistema debe estar funcionando antes del 15 de Diciembre del 2027''.
+
+SRS: la especificación de requisitos del software describe un requisito que debe ser cumplido por el software por ejemplo: E5 ``el sistema deberá generar reportes en formato PDF de forma mensual''.
+
+(c) Para cada hecho H1 a H5
+
+-H1: Especificación - Actividad Central
+
+-H2: Análisis y negociación - Actividad Transversal
+
+-H3: Elicitación - Actividad Central
+
+-H4: Validación - Actividad Central
+
+-H5: Gestión - Actividad Transversal
+
+\hfill Hoja 1
+
+\newpage
+
+\section*{T2. Clasificación y auditoría}
+
+(a) Clasificación.
+
+\begin{longtable}{|p{1cm}|p{2.6cm}|p{2.2cm}|p{9cm}|}
+\hline
+\textbf{ID} & \textbf{TIPO} & \textbf{Documento} & \textbf{Justificación}\\
+\hline
+\endhead
+E1 & No funcional & StRS & Es no funcional ya que al decir que debe mandar alarmas hasta de madrugada tiene que funcionar 24/7.\\
+\hline
+E2 & Funcional & SRS & El software debe declarar las alertas según los límites impuestos, por eso es funcional.\\
+\hline
+E3 & Proceso & SyRS & Se especifica como va a funcionar el sistema en conjunto.\\
+\hline
+E4 & Restricción & SyRS & Es una restricción porque da un límite de tiempo para que el sistema completo este funcionando.\\
+\hline
+E5 & Funcional & SRS & Es funcional porque va a generar reportes, eso dice que es algo que el sistema debe tener funcional\\
+\hline
+E6 & No Funcional & SRS & Es de calidad ``funcionar hasta sin 12 horas sin energía eléctrica'' es de eficiencia\\
+\hline
+E7 & No es requisito & & El esto describiendo como hace su trabajo pero no describe en su totalidad un requisito\\
+\hline
+E8 & No Funcional & StRS & Es de calidad, tiene que ver con la rapidez del sistema\\
+\hline
+E9 & Restricción & SRS & Dice donde debe funcionar el Sistema.\\
+\hline
+E10 & Funcional & StRS & Puede ser considerado una restricción pero es funcional ya que se debe implementar validación de usuarios\\
+\hline
+E11 & No funcional & StRS & Es de calidad, se refiere a que sea fácil de usar y entender.\\
+\hline
+E12 & No es requisito & & En ninguna parte se obtiene un requisito, solo describe una acción realizada.\\
+\hline
+\end{longtable}
+
+\hfill Hoja 2
+
+\newpage
+
+(b) Auditoría
+
+\begin{longtable}{|p{1cm}|p{5cm}|p{3.5cm}|p{4.5cm}|}
+\hline
+\textbf{ID} & \textbf{Término o construcción problemática} & \textbf{Característica que incumple} & \textbf{Propiedad Smart que incumple}\\
+\hline
+\endhead
+B1 & Se refiere a la Calidad & No Ambiguo & \\
+\hline
+B2 & Rápidez - Eficiencia & No Ambiguo & \\
+\hline
+B3 & Medir cada punto sin importar la señal o luz & Factible & \\
+\hline
+B4 & Restricción. & No ambiguo & \\
+\hline
+B5 & Debe permitir descargar datos & Singular & \\
+\hline
+\end{longtable}
+
+Justificación:
+
+B1:
+
+B2:
+
+B3:
+
+B4:
+
+B5:
+
+\section*{T3. Redacción de requisitos bien formados}
+
+\begin{longtable}{|p{1cm}|p{5.2cm}|p{1.9cm}|p{1.5cm}|p{1.2cm}|p{2.4cm}|}
+\hline
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} & \textbf{Documento} & \textbf{Fuente} & \textbf{Método de Verificación}\\
+\hline
+\endhead
+R-1 & El Sistema deberá funcionar en una velocidad de maximo 5 segundos. & No Funcional & SyRS & B1 & Prueba\\
+\hline
+R-2 & El sistema deberá ser utilizado por los vecinos registrados en un tiempo máximo de 2 min. & No Funcional & StRS & B1 & Prueba\\
+\hline
+R-3 & El sistema deberá medir el nivel del mar las 24 horas al día los 7 días de la semana, incluso sin energía eléctrica, ni señal. & Funcional & SyRS & B3 & Inspección\\
+\hline
+R-4 & El sistema deberá implementar una base de datos Firebase que esté ubicada en la nube de Google. & Funcional & SRS & B4 & Inspección\\
+\hline
+R-5 & El sistema deberá permitir la descarga de datos en formato Excel, PDF y Word. & Funcional & SRS & B5 & Demostración\\
+\hline
+R-6 & Cuando una lectura de nivel sea $\geq$ 5,5m el sistema deberá enviar sms a todos los vecinos en un plazo de 2min. & No Funcional & SyRS & B6 & Demostración\\
+\hline
+\end{longtable}
+
+\hfill Hoja 3
+
+\newpage
+
+\section*{T4. Sustento Normativo de la calidad}
+
+\begin{longtable}{|p{2.6cm}|p{6.5cm}|p{2.4cm}|p{3cm}|}
+\hline
+ & & \multicolumn{2}{c|}{Incumple}\\
+\hline
+\textbf{Característica} & \textbf{Qué exige} & \textbf{SMART} & \textbf{Requisito}\\
+\hline
+\endhead
+Necesario & Que el requisito sea fundamental para el caso que se estudia. & & \\
+\hline
+Singular & & & \\
+\hline
+No ambiguo & Que el requisito este completo, que se entienda. & & B1, B2\\
+\hline
+Verificable & Que el requisito tenga valores con los que se pueda verificar su rendimiento. & & B1, B2\\
+\hline
+Factible & Que sea un requisito que se pueda realizar, y sea realista. & & \\
+\hline
+\end{longtable}
+
+\hfill Hoja 4
+
+\end{document}
